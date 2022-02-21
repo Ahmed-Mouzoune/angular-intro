@@ -9,10 +9,12 @@
 <!--  <p>{{ product.description }}</p>-->
 <!--  <img width="100" height="100" [src]="product.image" />-->
 <!--</div>-->
-
-<div *ngFor="let pd of products; let i = index" class="product-detail">
-  {{ i }}
-  <h2>{{ pd.title }}</h2>
-  <p>{{ pd.description }}</p>
-  <strong>{{ pd.price }}</strong>
-</div>
+<header>
+  <h1>Listes produits</h1>
+</header>
+<main>
+  <div *ngFor="let pd of products; let i = index">
+    <!-- {{ i }} -->
+    <app-product [title]="pd.title" [description]="pd.description" [price]="pd.price" [image]="pd.image" [category]="pd.category"></app-product>
+  </div>
+</main>
