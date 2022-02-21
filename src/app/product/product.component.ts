@@ -11,6 +11,8 @@ export class ProductComponent implements OnInit {
   @Input() description: string | undefined;
   @Input() price: string | undefined;
   @Input() image: string | undefined;
+  @Input() rate: string | undefined;
+  @Input() count: string | undefined;
   @Input() category: string | undefined;
   
   constructor() { }

@@ -15,6 +15,15 @@
 <main>
   <div *ngFor="let pd of products; let i = index">
     <!-- {{ i }} -->
-    <app-product [title]="pd.title" [description]="pd.description" [price]="pd.price" [image]="pd.image" [category]="pd.category"></app-product>
+    <app-product 
+      [title]="pd.title" 
+      [description]="pd.description" 
+      [price]="pd.price" 
+      [image]="pd.image" 
+      [category]="pd.category"
+      [rate]="pd.rating.rate"
+      [count]="pd.rating.count"
+    >
+    </app-product>
   </div>
 </main>
