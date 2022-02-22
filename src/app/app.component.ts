@@ -17,7 +17,7 @@ export class AppComponent {
   }
 
   public fetchProducts() {
-    this.httpClient.get('https://fakestoreapi.com/products?limit=3')
+    this.httpClient.get('https://fakestoreapi.com/products')
       .subscribe((res: any) => {
         this.product = res[0];
         this.products = res.slice(0, 6);
